@@ -1,11 +1,126 @@
+body {
+  background-color: var(--whitee);
+  letter-spacing: .1rem;
+}
 
+.quiz-pg-container {
+  background-color: var(--green-250);
+  border-radius: 9px;
+  margin: 2rem auto;
+  /* padding: 2rem; */
+  width: 68vw;
+  height: 100vh;
+}
 
 #quiz {
-  text-align: center;
+  position: relative;
 }
 
 h2.main-quiz {
   color: var(--green-600);
+  margin-top: 8rem;
   font-size: 2.2rem;
   text-transform: uppercase;
+}
+
+/* Horizontal rule */
+.topmost-bar1,
+.topmost-bar2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.topmost-bar1 {
+  background-color: var(--green-400);
+  border-radius: 9px 0px 0px 0px;
+  height: 1.8rem;
+  width: 20%;
+}
+
+.topmost-bar2 {
+  background-color: var(--green-400);
+  border-radius: 9px 0px 0px 0px;
+  height: 1.8rem;
+  opacity: 0.1;
+  width: 100%;
+}
+
+hr.first-line {
+  border: 1px solid var(--gray-200);
+  opacity: 0.5;
+  width: 100%;
+}
+
+hr.second-line {
+  border-top: 4px solid #fff;
+  margin: -.03rem 0;
+  opacity: 0.5;
+  width: 100%;
+}
+
+/* Quiz Multiple Choice Section */
+.choices-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.choice-container {
+  background-color: var(--whitee);
+  border: 0.1rem solid rgba(86, 165, 235, 0.25);
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  min-height: 9rem;
+  padding: 1rem;
+  width: 45%;
+}
+
+.choice-container:hover {
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  cursor: pointer;
+  transform: translateY(-0.1rem);
+  transition: transform 150ms;
+}
+
+.choice-prefix {
+  background-color: var(--green-250);
+  border-radius: 50%;
+  color: var(--green-800);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 2rem;
+  padding: 1rem 1.6rem;
+}
+
+.choice-text {
+  font-weight: 700;
+  padding: 1.5rem;
+}
+
+/* Chosen answer */
+.chosen-container {
+  background-color: var(--green-400);
+}
+
+.chosen-container:hover {
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(10, 151, 202, 0.6);  
+}
+
+.chosen-prefix {
+  background-color: var(--green-600);
+  border-radius: 50%;
+  color: var(--whitee);
+}
+
+.chosen-text {
+  color: var(--whitee);
+  font-weight: 400;
+  padding: 1.5rem;
 }

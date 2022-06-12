@@ -6,11 +6,15 @@
   /* gray-colors */
   --whitee: #fff;
   --gray-100: #e9e9e9;
+  --gray-200: #a5a5a5;
+  --gray-300: #707070;
   /* green-colors */
   --green-200: #e6fffb;
+  --green-250: #CDF7F0;
   --green-300: #66DEE2;
   --green-400: #01C6CA;
   --green-600: #004A7A;
+  --green-800: #002741;
 }
 
 * {
