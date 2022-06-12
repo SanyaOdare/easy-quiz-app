@@ -42,7 +42,6 @@ startQuiz = () => {
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questions];
-  console.log(availableQuestions);  
   getNewQuestion();
 }
 
@@ -51,10 +50,7 @@ getNewQuestion = () => {
   if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     // go to end of page
     return window.location.assign("/end.html");
-
-  }
-  
-  
+  }  
   
   questionCounter++;
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -78,8 +74,19 @@ choices.forEach(choice => {
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset['number'];
-    console.log(selectedAnswer);    
-    getNewQuestion();
+
+    // Indicate correct or incorrect answer
+    const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+    console.log(classToApply);
+
+    selectedChoice.parentElement.classList.add(classToApply);
+    // delay a little bit before removing correct || incorrect
+    setTimeout( () => {
+      selectedChoice.parentElement.classList.remove(classToApply);
+      getNewQuestion();
+    }, 1000);
+
+    
   });
 });
 

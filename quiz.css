@@ -103,6 +103,33 @@ hr.second-line {
   padding: 1.5rem;
 }
 
+.correct {
+  background-color: var(--green-alt-500);
+  color: var(--whitee);
+}
+
+.incorrect {
+  background-color: var(--red-500);
+  color: var(--whitee);
+}
+
+/* heads-up display = HUD */
+#hud-item {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.hud-prefix, .hud-main-text {
+  color: var(--green-600);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.hud-prefix {
+  margin-right: 1rem;
+}
+
 /* Chosen answer */
 /* .chosen-container {
   background-color: var(--green-400);
