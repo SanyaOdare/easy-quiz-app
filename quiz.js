@@ -1,5 +1,8 @@
 let question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+const progressText = document.getElementById('progress-text');
+const scoreText = document.getElementById('score');
+const progressBarFull = document.getElementById('progress-bar-full')
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -43,16 +46,20 @@ startQuiz = () => {
   score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
-}
+};
 
 getNewQuestion = () => {
   // if no more question 
   if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
     // go to end of page
-    return window.location.assign("/end.html");
+    return window.location.assign("/endpage.html");
   }  
   
   questionCounter++;
+  progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
+  // update the progress bar
+  progressBarFull.style.width = `${(questionCounter / MAX_QUESTIONS) * 100}%`;
+
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
@@ -77,7 +84,11 @@ choices.forEach(choice => {
 
     // Indicate correct or incorrect answer
     const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-    console.log(classToApply);
+    // console.log(classToApply);
+
+    if(classToApply === 'correct') {
+      incrementScore(CORRECT_BONUS);
+    }
 
     selectedChoice.parentElement.classList.add(classToApply);
     // delay a little bit before removing correct || incorrect
@@ -89,5 +100,11 @@ choices.forEach(choice => {
     
   });
 });
+
+// Validate user's choice and add 10 marks to correct answer
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+}
 
 startQuiz();
