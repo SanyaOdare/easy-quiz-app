@@ -96,7 +96,7 @@ h3 {
 }
 
 /* Button */
-a.btn {
+.btn {
   background-color: var(--whitee);
   border: 0.1rem solid var(--green-600);
   color: var(--green-600);
@@ -108,7 +108,7 @@ a.btn {
   width: 20rem;
 }
 
-a.btn:hover {
+.btn:hover {
   box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
   cursor: pointer;
   transform: translateY(-0.1rem);
@@ -119,4 +119,25 @@ a.btn:hover {
   box-shadow: none;
   cursor: pointer;
   transform: none;
+}
+
+/* Form */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+input {
+  border: none;
+  box-shadow: 0 0.1rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  width: 20rem;
+}
+
+input::placeholder {
+  color: var(--gray-200);
 }

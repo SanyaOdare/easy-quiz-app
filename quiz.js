@@ -51,6 +51,8 @@ startQuiz = () => {
 getNewQuestion = () => {
   // if no more question 
   if(availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+    // save score to local storage
+    localStorage.setItem('mostRecentScore', score);
     // go to end of page
     return window.location.assign("/endpage.html");
   }  

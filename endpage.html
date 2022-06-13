@@ -10,17 +10,20 @@
 <body>
   <div class="container">
     <div id="quiz-end" class="flex-center flex-column">
-      <h1 id="final-score">0</h1>
-      <form>
-        <input type="text" name="username" id="username">
+      <h1 id="final-score"></h1>
+      <form class="flex-center flex-column">
+        <input type="text" name="username" id="username" placeholder="username">
         <button 
         type="submit" 
         class="btn" 
         id="save-score-btn"
         onclick="saveHighScore(event)"
+        disabled
         >Save
       </button>
       </form>
+      <a href="quiz.html" class="btn">Play Again</a>
+      <a href="/" class="btn">Go Home</a>
     </div>
   </div>  
   <script src="endpage.js"></script>
