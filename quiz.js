@@ -90,11 +90,9 @@ choices.forEach(choice => {
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset['number'];
-
     // Indicate correct or incorrect answer
     const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
     // console.log(classToApply);
-
     if(classToApply === 'correct') {
       incrementScore(CORRECT_BONUS);
     }
@@ -104,9 +102,7 @@ choices.forEach(choice => {
     setTimeout( () => {
       selectedChoice.parentElement.classList.remove(classToApply);
       getNewQuestion();
-    }, 1000);
-
-    
+    }, 1000);    
   });
 });
 
