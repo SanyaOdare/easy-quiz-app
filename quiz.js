@@ -1,8 +1,10 @@
-let question = document.getElementById('question');
+const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progress-text');
 const scoreText = document.getElementById('score');
-const progressBarFull = document.getElementById('progress-bar-full')
+const progressBarFull = document.getElementById('progress-bar-full');
+const loader = document.getElementById('loader');
+const game = document.getElementById('quiz');
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -32,12 +34,12 @@ fetch('https://opentdb.com/api.php?amount=10&category=12&difficulty=easy&type=mu
     })
     return formattedQuestion;
   });
+
   startGame();
 })
 .catch(err => {
-  console.error(err);
-  
-})
+  console.error(err);  
+});
 
 // CONSTANTS
 const CORRECT_BONUS = 10;
@@ -48,6 +50,9 @@ startGame = () => {
   score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
+  // show loader whilst questions is loading add hide there after
+  game.classList.remove('hidden');
+  loader.classList.add('hidden');
 };
 
 getNewQuestion = () => {

@@ -10,7 +10,8 @@
 </head>
 <body>
   <div class="quiz-pg-container">
-    <div id="quiz" class="justify-center flex-column text-center">
+    <div id="loader"></div>
+    <div id="quiz" class="justify-center flex-column text-center hidden">
       <div class="topmost-bar1"></div>
       <div class="topmost-bar2"></div>
       <!-- heads-up display = HUD -->
@@ -27,25 +28,25 @@
           <h1 class="hud-main-text" id="score"></h1>
         </div>
       </div>
-      <h2 id="question" class="main-quiz">What is Michael Jackson's Mother's name?</h2>
+      <h2 id="question" class="main-quiz"></h2>
       <hr class="first-line">
       <hr class="second-line">
       <div class="choices-wrapper">
         <div class="choice-container">
           <p class="choice-prefix">A</p>
-          <p class="choice-text" data-number="1">Choice 1</p>
+          <p class="choice-text" data-number="1"></p>
         </div>
         <div class="choice-container chosen-container">
           <p class="choice-prefix chosen-prefix">B</p>
-          <p class="choice-text chosen-text" data-number="2">Choice 2</p>
+          <p class="choice-text chosen-text" data-number="2"></p>
         </div>
         <div class="choice-container">
           <p class="choice-prefix">C</p>
-          <p class="choice-text" data-number="3">Choice 3</p>
+          <p class="choice-text" data-number="3"></p>
         </div>
         <div class="choice-container">
           <p class="choice-prefix">D</p>
-          <p class="choice-text" data-number="4">Choice 4</p>
+          <p class="choice-text" data-number="4"></p>
         </div>
       </div>
       

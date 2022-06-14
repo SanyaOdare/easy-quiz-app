@@ -148,6 +148,26 @@ hr.second-line {
   width: 0%;
 }
 
+/* Loader */
+#loader {
+  animation: spin 1.5s linear infinite;
+  border: 1.6rem solid var(--whitee);
+  border-radius: 50%;
+  border-top: 1.2rem solid var(--green-400);
+  height: 10rem;
+  width: 10rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
+}
+
 /* Chosen answer */
 /* .chosen-container {
   background-color: var(--green-400);
