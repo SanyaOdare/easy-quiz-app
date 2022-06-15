@@ -10,11 +10,24 @@ body {
   margin: 2rem auto;
   overflow: hidden;
   position: relative;
-  width: 68vw;  
+  width: 68vw;
+  z-index: 1;
 }
+
+/* .bg-image {
+  background-image: url(./img/img-5.png);
+  background-repeat: space;
+  height: 100vh;
+  opacity: .05;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+} */
+
 
 #quiz {
   position: relative;
+  z-index: 3;
 }
 
 #main-quiz-container {
@@ -166,10 +179,11 @@ hr.second-line {
   margin: 0 auto;
   margin-top: 4rem;
   width: 10rem;
+  z-index: 4;
 }
 
 /* Illustrations  */
-.shoe-img {
+.drum-img {
   position: absolute;
   left: -3%;
   transform: rotate(25deg);
@@ -185,20 +199,24 @@ hr.second-line {
   width: 9%;
 }
 
-.banana-img {
+.headphone-img {
   position: absolute;
-  right: -3%;
-  transform: rotate(-40deg);
-  top: 16%;
+  right: -2%;
+  transform: rotate(30deg);
+  top: 25%;
   width: 15%;
 }
 
-.bicycle-img {
+.guitar-img {
   position: absolute;
-  right: -2%;
-  transform: rotate(20deg);
+  right: 5%;
+  transform: rotate(-30deg);
   top: 50%;
-  width: 35%;
+  width: 20%;
+}
+
+.notes-img {
+  width: 100%;
 }
 
 @keyframes spin {
@@ -211,7 +229,9 @@ hr.second-line {
   
 }
 
-@media (max-width: 1875px) {
+/* MEDIA QUERIES */
+
+@media (max-width: 1400px) {
   .quiz-pg-container {
     width: 90vw;  
   }
@@ -222,41 +242,38 @@ hr.second-line {
 
 }
 
-@media (max-width: 1090px) {
+@media (max-width: 992px) {
   .quiz-pg-container {
     width: 90vw;  
   }
 
+  #main-quiz-container {
+    margin-bottom: .8rem;
+    padding: 0 15rem;
+  }
+
+  h2.main-quiz {
+    font-size: 2rem !important;
+  }
+
   .choice-container {
-    width: 50%;
+    width: 60%;
   }
 
 }
+
 /* Small Mobile Device */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .quiz-pg-container {
-    width: 100vw;  
+    margin: 2rem 0 0;
+    overflow: hidden;
+    width: 96vw;  
   }
   
   #main-quiz-container {
     margin-bottom: 1rem;
     padding: 0 3rem;
   }
-  
-  /* h2.main-quiz {
-    color: var(--green-600);
-    font-size: 2.2rem;
-    margin-top: 0;
-    text-transform: uppercase;
-  } */
-
-
-
-
-
-
-
-
 
   #quiz {
     margin: 0 auto;
@@ -268,15 +285,12 @@ hr.second-line {
   }
 
   #progress-bar {
-    border: 0.2rem solid var(--green-300);
     height: 1rem;
     width: 10rem;
   }
   
   #progress-bar-full {
-    background-color: var(--green-300);
     height: .8rem;
-    width: 0%;
   }
 
   .hud-main-sm {
@@ -291,7 +305,7 @@ hr.second-line {
     width: 85%;
   }
 
-  .shoe-img {
+  .drum-img {
     top: 66%;
   }
 
@@ -299,9 +313,8 @@ hr.second-line {
     left: 5%;
   }
 
-  .bicycle-img {
+  .guitar-img {
     top: 65%;
-    /* width: 35%; */
   }
 
 }
