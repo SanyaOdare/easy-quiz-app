@@ -25,7 +25,7 @@ saveHighScore = e => {
   // add score to list and sort - based on decrease in score
   highScores.push(score);
   highScores.sort((a,b) => b.score - a.score);
-  highScores.splice(5);
+  highScores.splice(3);
 
   // update local storage
   localStorage.setItem('highScores', JSON.stringify(highScores));

@@ -17,6 +17,11 @@ body {
   position: relative;
 }
 
+#main-quiz-container {
+  margin-bottom: 3rem;
+  padding: 0 35rem;
+}
+
 h2.main-quiz {
   color: var(--green-600);
   font-size: 2.2rem;
@@ -158,6 +163,8 @@ hr.second-line {
   border-radius: 50%;
   border-top: 1.2rem solid var(--green-400);
   height: 10rem;
+  margin: 0 auto;
+  margin-top: 4rem;
   width: 10rem;
 }
 
@@ -204,6 +211,17 @@ hr.second-line {
   
 }
 
+@media (max-width: 1875px) {
+  .quiz-pg-container {
+    width: 90vw;  
+  }
+
+  .choice-container {
+    width: 50%;
+  }
+
+}
+
 @media (max-width: 1090px) {
   .quiz-pg-container {
     width: 90vw;  
@@ -217,7 +235,24 @@ hr.second-line {
 
 @media (max-width: 700px) {
   .quiz-pg-container {
-    width: 90vw;  
+    width: 100vw;  
+  }
+
+  #quiz {
+    margin: 0 auto;
+    width: 90vw;
+  }
+
+  #progress-bar {
+    border: 0.2rem solid var(--green-300);
+    height: 1rem;
+    width: 10rem;
+  }
+  
+  #progress-bar-full {
+    background-color: var(--green-300);
+    height: .8rem;
+    width: 0%;
   }
 
   .hud-main-sm {
@@ -230,6 +265,19 @@ hr.second-line {
 
   .choice-container {
     width: 85%;
+  }
+
+  .shoe-img {
+    top: 66%;
+  }
+
+  .orange-img {
+    left: 5%;
+  }
+
+  .bicycle-img {
+    top: 65%;
+    /* width: 35%; */
   }
 
 }
