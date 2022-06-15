@@ -232,15 +232,39 @@ hr.second-line {
   }
 
 }
-
+/* Small Mobile Device */
 @media (max-width: 700px) {
   .quiz-pg-container {
     width: 100vw;  
   }
+  
+  #main-quiz-container {
+    margin-bottom: 1rem;
+    padding: 0 3rem;
+  }
+  
+  /* h2.main-quiz {
+    color: var(--green-600);
+    font-size: 2.2rem;
+    margin-top: 0;
+    text-transform: uppercase;
+  } */
+
+
+
+
+
+
+
+
 
   #quiz {
     margin: 0 auto;
     width: 90vw;
+  }
+
+  h2.main-quiz {
+    font-size: 1.8rem !important;
   }
 
   #progress-bar {
