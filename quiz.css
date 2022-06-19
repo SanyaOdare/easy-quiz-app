@@ -13,17 +13,6 @@ body {
   width: 68vw;
 }
 
-/* .bg-image {
-  background-image: url(./img/img-5.png);
-  background-repeat: space;
-  height: 100vh;
-  opacity: .05;
-  overflow: hidden;
-  width: 100%;
-  z-index: 2;
-} */
-
-
 #quiz {
   position: relative;
 }

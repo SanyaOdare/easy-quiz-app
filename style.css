@@ -16,6 +16,7 @@
   --green-600: #004A7A;
   --green-800: #002741;
   --green-alt-500: #28a745;
+  /* red-colors */
   --red-500: #ff0000;
 }
 
@@ -38,7 +39,6 @@ h1, h2, h3, h4 {
 h1 {
   color: var(--green-600);
   font-size: 5.4rem;
-  /* font-weight: 700; */
   margin-bottom: 5rem;
 }
 
@@ -58,6 +58,7 @@ h3 {
   font-weight: 500;
 }
 
+/* Utility Classes { */
 .container {
   display: flex;
   align-items: center;
@@ -94,8 +95,9 @@ h3 {
 .hidden {
   display: none;
 }
+/* } Utility Classes */
 
-/* Button */
+/* Button { */
 .btn {
   background-color: var(--whitee);
   border: 0.1rem solid var(--green-600);

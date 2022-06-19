@@ -48,6 +48,7 @@ const MAX_QUESTIONS = 3;
 startGame = () => {
   questionCounter = 0;
   score = 0;
+  // make full copy of questions and save as available questions
   availableQuestions = [...questions];
   getNewQuestion();
   // show loader whilst questions is loading add hide there after
@@ -84,7 +85,7 @@ getNewQuestion = () => {
 
 choices.forEach(choice => {
   choice.addEventListener('click', e => {
-    // if no answer is clicked
+    // ignore if no answer is clicked
     if(!acceptingAnswers) return;
 
     acceptingAnswers = false;
